@@ -97,6 +97,7 @@
 	overflow: hidden;
 	transition: all 0.5s;
 	border-top: 1px solid #eee;
+	position: relative;
 	/* padding-top: 14px; */
 	/* position: absolute;
 	top: 165px;
@@ -132,7 +133,12 @@
 	text-align: center;
 	margin-top: 8px;
 }
-.dapei_goodlist.achive{
+.nav_bottom_goodlist{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.nav_bottom_goodlist.achive{
 	z-index: 999;
 }
 
