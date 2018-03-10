@@ -139,7 +139,7 @@
 		})
 	}
 
-//哈利波特
+//推荐
 	{
 		function tuijie(parent){
 			const prve=parent.querySelector(".buy-prev");
@@ -177,3 +177,107 @@
 			tuijie(ele);
 		})
 	}
+
+//哈利波特
+{
+	function wheel(parent){
+		let prev=parent.querySelector(".reping_lbtn");
+		let next=parent.querySelector(".reping_rbtn");
+		let inner=parent.querySelector(".reping_b2");    //da
+		let contents=parent.querySelectorAll(".reping_goodlist");   //tu
+		let pagers=parent.querySelectorAll(".reping_b25btv");
+
+		let n=0;
+		next.onclick=function(){
+			n++;
+			if(n===contents.length){
+				n=contents.length-1;
+				return;
+			}
+			inner.style.marginLeft=n*-296+"px";
+			pagers[n].classList.add("active");
+			pagers[n-1].classList.remove("active");
+		};
+		prev.onclick=function(){
+			n--;
+			if(n<0){
+				n=0;
+				return;
+			}
+			inner.style.marginLeft=n*-296+"px";
+			pagers[n].classList.add("active");
+			pagers[n+1].classList.remove("active");
+			obj=pagers[0];       
+		};
+		//点哪个点亮对应的图片
+		let obj=pagers[0];     //默认第一张有颜色
+		pagers.forEach(function(ele,index){
+			ele.onclick=function(){
+				obj.classList.remove("active");
+				ele.classList.add("active");
+				obj=ele;
+				inner.style.marginLeft=index*-296+"px";     //图片位移
+				n=index;     //统一下标，
+			}
+		})
+	}
+
+	let items=document.querySelectorAll(".reping_item");
+	items.forEach(function(ele){
+			wheel(ele);
+		})
+}
+
+//banner 侧导航
+	{
+		// function ce(parent){
+			let lab=document.querySelectorAll(".banner_nav li");
+			let menus=document.querySelectorAll(".piaofu");
+			let obj=menus[0];
+			lab.forEach(function(ele,index){
+				ele.onmouseenter=function(){
+					// obj.style.display="none";
+					menus[index].style.display="block";
+					// obj=menus[index];
+				}
+				ele.onmouseleave=function(){
+					menus[index].style.display="none";
+				}
+			})
+		// let items=document.querySelectorAll(".banner_nav li");
+		// items.forEach(function(ele){
+		// 	ce(ele);
+		// })
+	}
+
+//导航栏  下拉效果
+{
+	// function nav(parent){
+		let nav=document.querySelector(".nav");
+		let wenzis=document.querySelector(".nav_wenzi");
+		let nav_bottom=document.querySelector(".nav_bottom");
+		const goods=document.querySelectorAll(".nav_bottom_goodlist"); 
+		let types=document.querySelectorAll(".nav_wenzi span");
+		wenzis.onmouseenter=function(){
+			nav_bottom.style.height="220px";
+		}
+		wenzis.onmouseleave=function(){
+			nav_bottom.style.height="0px";
+		}
+		
+		types.forEach(function(ele,index){
+			ele.onmouseenter=function(){
+				for(let i=0;i<types.length;i++){
+					types[i].classList.remove("achive");
+					goods[i].classList.remove("achive");
+				}
+				this.classList.add("achive");
+				goods[index].classList.add("achive"); 
+			}
+		})
+}
+	// const contentlist=document.querySelectorAll(".nav");
+	// 	// content(contentlist[0]);
+	// contentlist.forEach(function(ele){
+	// 	nav(ele);
+	// })

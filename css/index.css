@@ -47,6 +47,12 @@
 }
 .nav{
 	width: 1226px;
+	/* height: 100px; */
+	margin:0 auto; 
+	position: relative;
+}
+.nav_top{
+	width: 1226px;
 	height: 100px;
 	margin:0 auto; 
 }
@@ -58,9 +64,20 @@
 	float: left;
 	cursor: pointer;
 }
+.nav_nvshen{
+	width: 165px;
+	height: 100px;
+	/* background: red; */
+	float: left;
+	margin-left: 14px;
+}
+.nav_nvshen img{
+	width: 165px;
+	height: 100px;
+}
 .nav_wenzi{
 	float: left;
-	margin-left: 189px;
+	margin-left: 0;
 }
 .nav_wenzi span{
 	line-height: 100px;
@@ -70,6 +87,57 @@
 	padding: 0px 10px;
 	cursor: pointer;
 }
+.nav_wenzi span.achive{
+	color: #ff6700;
+}
+.nav_bottom{
+	width: 100%;
+	height: 0;
+	background: #fff;
+	overflow: hidden;
+	transition: all 0.5s;
+	border-top: 1px solid #eee;
+	/* padding-top: 14px; */
+	/* position: absolute;
+	top: 165px;
+	left: 0; */
+}
+.nav_bottom_img{
+	width: 198px;
+	height: 200px;
+	/* background: red; */
+	border-right: 1px solid #eee;
+	margin-left: 14px;
+	float: left;
+	margin-top: 10px;
+}
+.nav_bottom_img img{
+	width:150px;
+	height: 100px;
+	margin-top: 20px;
+	margin-left: 20px;
+	display: block;
+}
+.nav_bottom_2{
+	display: block;
+	font-size: 12px;
+	color: #b0b0b0;
+	text-align: center;
+	margin-top: 20px;
+}
+.nav_bottom_3{
+	display: block;
+	font-size: 12px;
+	color: #ff6700;
+	text-align: center;
+	margin-top: 8px;
+}
+.dapei_goodlist.achive{
+	z-index: 999;
+}
+
+
+
 .nav_search{
 	border: 1px;
 	border-style: solid;
@@ -187,16 +255,16 @@
 	font-weight: normal;
 	margin-top: 12px;
 }
-.start_item1{
+.buy_item.start_item1{
 	border-top: 1px solid #83C450;
 }
-.start_item2{
+.buy_item.start_item2{
 	border-top: 1px solid #2196F3;
 }
-.start_item3{
+.buy_item.start_item3{
 	border-top: 1px solid #E53C38;
 }
-.start_item4{
+.buy_item.start_item4{
 	border-top: 1px solid #00C0A5;
 }
 
@@ -657,6 +725,10 @@
 	/* background-color:#FFFFFF; */
 	float: right;
 }
+.tuijie_btn .disable{
+	z-index: 999;
+	color: #ccc;
+}
 .tuijie_btn div{
 	width: 34px;
 	height: 22px;
@@ -1028,7 +1100,7 @@
 .banner_img{   /* 定图片位置 */
 	width: 1226px;
 	height: 460px;
-	background-color: red;
+	/* background-color: red; */
 	position: relative;
 	cursor: pointer;
 }
@@ -1038,6 +1110,40 @@
 	position: absolute;
 	top: 0px;
 	left: 0;
+}
+.piaofu{
+	width: 780px;
+	height: 460px;
+	background: #fff;
+	position: absolute;
+	top: 0;
+	left: 234px;
+	z-index: 999;
+	box-shadow: 0 2px 20px 1px #D6D6D3;
+	display: none;
+}
+.piaofu_item{
+	height: 56px;
+	width: 240px;
+	/* background: red; */
+	float: left;
+	padding-top: 20px;
+	padding-left: 20px;
+}
+.piaofu_item_left{
+	width: 40px;
+	height: 50px;
+	/* background: skyblue; */
+	float: left;
+}
+.piaofu_item_left img{
+	width: 40px;
+	height: 50px;
+}
+.piaofu_item_right{
+	float: left;
+	margin-left: 10px;
+	color: #3B3B40;
 }
 .banner_nav{
 	width: 234px;
@@ -1075,7 +1181,7 @@
 	bottom: 0;
 	margin: auto;
 	cursor: pointer;
-	z-index: 999;
+	z-index: 888;
 }
 .banner_lbtn{
 	left: 234px;
@@ -1436,8 +1542,12 @@
 	border-top: 1px solid #FFAC13;
 	position: relative;
 }
-.reping_item:hover{
-
+.reping_b2_zong{
+	width: 296px;
+	height: 340px;
+	float: left;
+	/* background-color: red; */
+	overflow: hidden;
 }
 .reping_item1{
 	margin-right: 0px;
@@ -1465,18 +1575,20 @@
 .reping_b13{
 	color: #E53935;
 }
-.reping_b14{
+/* .reping_b14{
 	color: skyblue;
-}
-.reping_zong{
-	position: relative;
-}
+} */
 .reping_b2{
+	width: 1226px;
+	height: 340px;
+	float: left;
+}
+.reping_goodlist{
 	width: 296px;
 	height: 340px;
-	/* position: absolute;
-	top: 42px;
-	left: 0; */
+	float: left;
+	transition: all 0.5s;
+	background-color: #fff;
 }
 .reping_b21{
 	width: 256px;
@@ -1532,31 +1644,29 @@
 	/* background-color: red; */
 	margin: 0 auto;
 	margin-top: 20px;
+	position: absolute;
+	bottom: 20px;
+	left: 80px;
 }
 .reping_b25btv{
 	width: 8px;
 	height: 8px;
 	background-color: #b0b0b0;
-	float:right;
+	float:left;
 	border-radius: 50%;           /*画圆  半径=50%  */
 	color: #fff;
 	margin: 11px;
 }
-.reping_b25btv1{
+.reping_b25btv.active{
 	width: 10px;
 	height: 10px;
 	background-color: #fff;
-	float:right;
+	float:left;
 	border-radius: 50%;           /*画圆  半径=50%  */
 	color: #fff;
 	border: 1px solid #ff6700;
 	margin-top: 10px;
-
 }
-.reping_b25btv:hover{
-	background-color: #ff6700;
-}
-
 .inp1{
 	width: 245px;
 	height: 50px;
@@ -1595,10 +1705,10 @@
 }
 
 
-.reping_btn{
+.reping_lbtn,.reping_rbtn{
 	width: 30px;
 	height: 50px;
-	background-color: #fff;
+	background-color: #b0b0b0;
 	text-align: center;
 	line-height: 50px;
 	color: #fff;
@@ -1608,6 +1718,8 @@
 	bottom: 0;
 	margin: auto;
 	cursor: pointer;
+	opacity: 0;
+	transition: all 0.5s;
 }
 .reping_lbtn{
 	left: 0px;
@@ -1615,10 +1727,16 @@
 .reping_rbtn{
 	right: 0;
 }
-.reping_item:hover .reping_btn{
-	background-color: #b0b0b0;
+.reping_item:hover .reping_lbtn,.reping_item:hover .reping_rbtn{
+	opacity: 0.5;
 }
 
+.reping_lbtn:hover{
+	opacity: 0.9!important;
+}
+.reping_rbtn:hover{
+	opacity: 0.9!important;
+}
 
 .imgbox{
 	width: 1226px;
@@ -1658,17 +1776,17 @@
 	width: 6px;
 	height: 6px;
 	margin: 0 10px;
-	background: blue;
+	background: #666;
 	float: left;
 	border-radius: 50%;
-	border: 2px solid #fff;
+	border: 1px solid #fff;
 	cursor: pointer;
 	transition: all 0.6s;
 }
 .pagebox li.active{
-	background: red;
+	background: #ff6700;
 
 }
 .pagebox li:hover{
-	background: red;
+	background: #ff6700;
 }
