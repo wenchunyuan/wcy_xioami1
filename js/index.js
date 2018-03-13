@@ -1,23 +1,20 @@
 //banner
 	{
-		const imgs=document.querySelectorAll(".imgbox li");   //不会被修改，常量
+		const imgs=document.querySelectorAll(".imgbox li");   //const:不会被修改，常量
 		let pagers=document.querySelectorAll(".pagebox li");
 		let benner=document.querySelector("#benner");   //设置banner，鼠标放上去，停止播放，鼠标移开开始播放。
 		let banner_lbtn=document.querySelector(".banner_lbtn"); 
 		let banner_rbtn=document.querySelector(".banner_rbtn"); 
 
-		// console.log(imgs);
-		// console.log(pagers);
-		pagers.forEach(function(ele,index){    //形参：遍历数。
-			// console.log(ele);
+		pagers.forEach(function(ele,index){    //形参,遍历数。
 			ele.onclick=function(){
 				for(let i=0;i<imgs.length;i++){
 					imgs[i].classList.remove("active");
 					pagers[i].classList.remove("active");   //移除active
 				}
-				this.classList.add("active");
-				imgs[index].classList.add("active");    //添加active
-				n=index;     //n从当前位子自加。
+					this.classList.add("active");
+					imgs[index].classList.add("active");    //添加active
+					n=index;     //n从当前位子自加。
 			}
 		})
 
@@ -63,6 +60,7 @@
 						// },3000)
 			t=setInterval(move,3000);
 		}
+		
 		let flag=true;
 		banner_rbtn.onclick=function(){
 			if(flag){
@@ -251,13 +249,15 @@
 	}
 
 //导航栏  下拉效果
-{
-	// function nav(parent){
-		let nav=document.querySelector(".nav");
+	{
+		// let nav=document.querySelector(".nav");
 		let wenzis=document.querySelector(".nav_wenzi");
 		let nav_bottom=document.querySelector(".nav_bottom");
 		const goods=document.querySelectorAll(".nav_bottom_goodlist"); 
 		let types=document.querySelectorAll(".nav_wenzi span");
+
+		let obj=goods[0];                   //设置diaplay：none；确保开始不出现。
+
 		wenzis.onmouseenter=function(){
 			nav_bottom.style.height="220px";
 		}
@@ -268,16 +268,14 @@
 		types.forEach(function(ele,index){
 			ele.onmouseenter=function(){
 				for(let i=0;i<types.length;i++){
-					types[i].classList.remove("achive");
-					goods[i].classList.remove("achive");
+					// types[i].classList.remove("achive");
+					// goods[i].classList.remove("achive");
+					obj.style.display="none";
+					goods[index].style.display="block";
+					obj=goods[index];
 				}
-				this.classList.add("achive");
-				goods[index].classList.add("achive"); 
+				// this.classList.add("achive");
+				// goods[index].classList.add("achive"); 
 			}
 		})
-}
-	// const contentlist=document.querySelectorAll(".nav");
-	// 	// content(contentlist[0]);
-	// contentlist.forEach(function(ele){
-	// 	nav(ele);
-	// })
+	}
