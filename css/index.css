@@ -258,7 +258,39 @@
 	float: left;
 	border-top: 1px solid #FFAC12;
 	/* padding-top: 39px; */
-	margin-right: 14px;	
+	margin-right: 14px;
+}
+.start_itemIMG{
+	width: 234px;
+	height: 339px;
+	position: relative;
+}
+.start_itemIMG img{
+	width: 234px;
+	height: 339px;
+	position: absolute;
+	left: 0;
+	top:0;
+}
+.start_itemIMG_1{
+	width: 45px;
+	height: 45px;
+	/*background: red;*/
+	position: absolute;
+	left: 35px;
+	top:245px;
+	font-size: 24px;
+	text-align: center;
+	line-height: 45px;
+	color: #fff;
+}
+.start_itemIMG_2{
+	left: 95px;
+	/*background: skyblue;*/
+}
+.start_itemIMG_3{
+	left: 160px;
+	/*background: yellow;*/
 }
 .start_item img{
 	width: 234px;
@@ -637,7 +669,7 @@
 }
 .dapei_item3{
 	width: 234px;
-	height: 300px;
+	height: 290px;
 	background-color: #fff;
 	float: left;
 	margin-bottom: 14px;
@@ -963,7 +995,7 @@
 .map_box21{
 	width: 974px;
 	height: 112px;
-	background-color: pink;
+	/*background-color: pink;*/
 	float: left;
 }
 .map_box22{	
@@ -1211,7 +1243,6 @@
 }
 .banner_lbtn:hover,.banner_rbtn:hover{
 	background-color: rgba(0, 0, 0, .6);
-
 }
 .banner_lunbo{
 	width: 90px;
@@ -1232,7 +1263,6 @@
 	border: 1px solid #867B73;
 	margin-top: 4px;
 	margin-left: 10px;
-
 }
 .banner_lunbo2{
 	margin-left: 0px;
@@ -1484,6 +1514,7 @@
 .shiping_img{
 	width: 296px;
 	height: 180px;
+	color: #fff;
 }
 .shiping_xia{
 	width: 296px;
@@ -1523,7 +1554,6 @@
 	left: 10px;
 	bottom: 10px;
 	color: #fff;
-
 }
 .shiping_shang span:hover{
 	color: #ff6700;
@@ -1692,25 +1722,25 @@
 	height: 50px;
 	margin-top: 25px;
 	float: right;
+	/*border-style: none;*/
+	outline: none;
 }
 .inp2{
 	width: 54px;
 	height: 54px;
 	float: right;
 	margin-top: 25px;
-	/* background-color: #fff; */
 	margin-left: -1px;
-
 	font-family: 'iconfont';
 	color: #616161;
 	font-size: 24px;
-	/* display: block; */
-	/* text-align: center; */
-	/* margin: 0 auto; */
 	cursor: pointer;
+	outline: none;
+
 }
 .inp2:hover{
 	background-color: #ff6700;
+	color: #fff;
 }
 .zhineng_item:hover,.zhineng_shang:hover,.dapei_item:hover,.dapei_shang:hover,
 .dapei_xia:hover,.tuijie_item:hover,.neirong_item:hover,.neirong_item1:hover,
